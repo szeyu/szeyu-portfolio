@@ -11,6 +11,16 @@ const config: Config = {
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        purple: {
+          400: '#c084fc',
+        },
+        pink: {
+          600: '#db2777',
+        },
+        gray: {
+          300: '#d1d5db',
+          900: '#111827',
+        },
       },
     },
   },

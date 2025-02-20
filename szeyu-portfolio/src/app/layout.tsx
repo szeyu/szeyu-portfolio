@@ -1,4 +1,5 @@
-// Simplify the layout file
+import '@/styles/globals.css'
+
 export const metadata = {
   title: 'Sim Sze Yu - Portfolio',
   description: 'My personal portfolio as a developer',
