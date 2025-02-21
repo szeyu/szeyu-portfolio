@@ -1,24 +1,10 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { theme } from '@/lib/theme';
-import ShinyText from '@/components/ui/TextAnimations/ShinyText/ShinyText';
 import Link from 'next/link';
 import { socialLinks } from '@/data/socialLinks';
 
 export default function HeroSection() {
-
-  // Animation variants for floating effect
-  const floatAnimation = {
-    float: (i: number) => ({
-      y: [0, -10, 0],
-      transition: {
-        duration: 3,
-        repeat: Infinity,
-        repeatType: 'reverse',
-        delay: i * 0.3,
-      }
-    })
-  };
 
   return (
     <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-gradient-to-b from-[#0A192F] to-[#112240]">
@@ -60,6 +46,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
             className="relative w-64 h-64 sm:w-80 sm:h-80 mb-16"
+            whileHover={{ scale: 1.03 }}
           >
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#64FFDA]/30 to-[#A78BFA]/30 blur-xl" />
             <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-[#64FFDA]/20">
@@ -80,8 +67,10 @@ export default function HeroSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 style={social.position}
-                whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
+                whileHover={{ 
+                  scale: 1.2,
+                }}
               >
                 <Link href={social.url} target="_blank" rel="noopener noreferrer">
                   <div className="w-16 h-16 rounded-full bg-[#112240]/80 backdrop-blur-sm border border-white/10 flex items-center justify-center shadow-lg">
@@ -131,15 +120,23 @@ export default function HeroSection() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative px-8 py-3 rounded-md overflow-hidden bg-transparent border border-[#64FFDA]/30"
+              className="relative px-8 py-3 rounded-md overflow-hidden bg-transparent border border-[#64FFDA]/30"
               onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              <ShinyText 
-                text="View My Projects" 
-                disabled={false} 
-                speed={3}
-              />
+              <span className="relative text-[#64FFDA] font-medium">
+                View My Projects
+              </span>
             </motion.button>
+
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative px-8 py-3 rounded-md overflow-hidden bg-transparent border border-[#64FFDA]/30"
+            >
+              <a href="/about" className="relative text-[#64FFDA] font-medium">
+                About Me
+              </a>
+            </motion.button>  
             
             <motion.button
               whileHover={{ scale: 1.05 }}
