@@ -97,6 +97,7 @@ function Masonry({ data }: MasonryProps) {
       style={{ height: Math.max(...heights) }}
     >
       {transitions((style, item) => (
+        // @ts-ignore
         <a.div
           key={item.id}
           style={style}
