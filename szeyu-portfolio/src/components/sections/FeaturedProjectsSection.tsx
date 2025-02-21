@@ -1,6 +1,5 @@
 import SpotlightCard from '@/components/ui/Components/SpotlightCard/SpotlightCard';
 import { projectsData } from '@/data/projects';
-import { theme } from '@/lib/theme';
 
 export default function FeaturedProjectsSection() {
   return (

@@ -1,7 +1,7 @@
 /*
-	jsrepo 1.38.0
+	jsrepo 1.39.1
 	Installed from https://reactbits.dev/ts/tailwind/
-	2-20-2025
+	2-22-2025
 */
 
 import type { SpringOptions } from 'framer-motion';
