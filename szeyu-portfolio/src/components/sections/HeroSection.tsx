@@ -3,34 +3,9 @@ import Image from 'next/image';
 import { theme } from '@/lib/theme';
 import ShinyText from '@/components/ui/TextAnimations/ShinyText/ShinyText';
 import Link from 'next/link';
+import { socialLinks } from '@/data/socialLinks';
 
 export default function HeroSection() {
-  const socialLinks = [
-    {
-      name: 'LinkedIn',
-      icon: '/icons/linkedin.svg',
-      url: 'https://linkedin.com/in/szeyusim',
-      position: { top: '5%', left: '5%' }
-    },
-    {
-      name: 'Instagram',
-      icon: '/icons/instagram.svg',
-      url: 'https://instagram.com/szeyusim',
-      position: { top: '5%', right: '5%' }
-    },
-    {
-      name: 'GitHub',
-      icon: '/icons/github.svg',
-      url: 'https://github.com/szeyu',
-      position: { bottom: '5%', right: '5%' }
-    },
-    {
-      name: 'Medium',
-      icon: '/icons/medium.svg',
-      url: 'https://szeyusim.medium.com',
-      position: { bottom: '5%', left: '5%' }
-    }
-  ];
 
   // Animation variants for floating effect
   const floatAnimation = {
@@ -157,6 +132,7 @@ export default function HeroSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="group relative px-8 py-3 rounded-md overflow-hidden bg-transparent border border-[#64FFDA]/30"
+              onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <ShinyText 
                 text="View My Projects" 
@@ -171,35 +147,12 @@ export default function HeroSection() {
               className="relative px-8 py-3 rounded-md overflow-hidden bg-[#64FFDA] hover:bg-[#64FFDA]/90 
               transition-colors duration-300"
             >
-              <span className="relative text-[#0A192F] font-medium">
+              <a href="mailto:szeyusim@gmail.com" className="relative text-[#0A192F] font-medium">
                 Contact Me
-              </span>
+              </a>
             </motion.button>
           </motion.div>
         </div>
-      </div>
-
-      {/* Animated background particles */}
-      <div className="absolute inset-0 -z-20">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-white/20 rounded-full"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              opacity: [0.1, 0.5, 0.1],
-              scale: [1, 1.5, 1],
-            }}
-            transition={{
-              duration: 5 + Math.random() * 5,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-            }}
-          />
-        ))}
       </div>
     </section>
   );

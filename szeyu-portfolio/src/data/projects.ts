@@ -1,39 +1,122 @@
-interface FeaturedProject {
+interface Project {
   title: string;
-  event: string;
+  position: string;
+  duration: string;
   description: string;
-  image: string;
-  github: string;
-  demo: string;
-  tech: string[];
-  features: string[];
+  link: string;
 }
 
-export const featuredProjects: FeaturedProject[] = [
+export const projectsData: Project[] = [
   {
-    title: "SwiftSettle",
-    event: "Deriv Hack 25",
-    description: "AI-powered dispute resolution system that automates the settlement process using advanced language models and fairness algorithms.",
-    image: "/projects/swiftsettle.png",
-    github: "https://github.com/yourusername/swiftsettle",
-    demo: "https://swiftsettle.demo",
-    tech: ["Python", "LangChain", "React", "Node.js"],
-    features: [
-      "Natural language processing for dispute analysis",
-      "Automated settlement suggestions",
-      "Real-time negotiation platform"
-    ]
+    title: "Deriv Hack 25",
+    position: "Participant",
+    duration: "2025",
+    description: "AI Agent that streamlines Dispute Resolution using OCR and cross-checking with agentic tools calling",
+    link: "https://github.com/szeyu/DerivAIHack25"
   },
-  // ... other projects
+  {
+    title: "UM Datathon 24",
+    position: "Champion🏆",
+    duration: "2024",
+    description: "Bitcoin Quant Algo Trading. An ML model that is trained to predict next hour price changes and set the trading strategy (-1,0,1) trading position",
+    link: "https://github.com/szeyu/UMDatathon-24"
+  },
+  {
+    title: "Deriv Hack 24",
+    position: "Top 10 Finalist",
+    duration: "2024",
+    description: "AI eKYC Project. A streamline process of eKYC using OCR and AI",
+    link: "https://github.com/szeyu/Deriv-Hack"
+  },
+  {
+    title: "Setel Hack 24",
+    position: "Top 15 Finalist",
+    duration: "2024",
+    description: "AI-powered Chatbot for Retail. LLM that convert user sentiment to product recommendation. e.g. I'm sick -> Panadol",
+    link: "https://github.com/szeyu/SetelHack24-AiMaaS"
+  },
+  {
+    title: "GodamLah 24",
+    position: "Participant",
+    duration: "2024",
+    description: "AI eKYC Project (enhanced from Deriv Hack 24). Added hand gesture recognition for user verification",
+    link: "https://github.com/szeyu/godamlah"
+  },
+  {
+    title: "PayHack 24",
+    position: "Participant",
+    duration: "2024",
+    description: "FinScope Project. A figma prototype that consists of a small campanion for financial planning",
+    link: "https://www.figma.com/slides/MufVO3sqMea8EsumCE1kjP/FinScope-(Pitch-Deck)?node-id=25-19&t=mDYAVsJ3J9f5okOa-1"
+  },
+  {
+    title: "Good Food",
+    position: "Group Project",
+    duration: "2024",
+    description: "An Android Studio App which can help to analyse nutrition of your daily food with a picture. It can suggest recipe for you too.",
+    link: "https://github.com/szeyu/GoodFood"
+  },
+  {
+    title: "Nutrition Microservice",
+    position: "Personal Project",
+    duration: "2024",
+    description: "A microservice in Go to extract ingredients information from image or suggest recipe using Gemini API and Edamam API. Also return the nutritional content of the food.",
+    link: "https://github.com/szeyu/nutrition-microservice"
+  },
+  {
+    title: "Vector Search From Scratch in Python",
+    position: "Personal Project",
+    duration: "2024",
+    description: "This repository implements a vector search solution based on image and text embeddings. Users can search for similar products using an image or a textual description.",
+    link: "https://github.com/szeyu/Vector-Search-From-Scratch"
+  },
+  {
+    title: "Awsome Android Code Template",
+    position: "Personal Project",
+    duration: "2024",
+    description: "A collection of commonly used Android templates to accelerate development workflow. Each template is designed to be modular and easily integrated into your Android projects.",
+    link: "https://github.com/szeyu/Awsome-Android-Code-Template"
+  },
+  {
+    title: "MYHackathon24 Cohort 1",
+    position: "Participant",
+    duration: "2024",
+    description: "A stackoverflow like website for public complaint",
+    link: "https://github.com/szeyu/sepadu-underflow"
+  },
+  {
+    title: "MYHackathon24 Cohort 2",
+    position: "Participant",
+    duration: "2024",
+    description: "An AI listener who eavesdrops on phone calls and flags suspicious calls",
+    link: "https://drive.google.com/drive/folders/166w-dbR2m_pwjuXoyDbcI3gAv0X-Z2kB?usp=sharing"
+  },
+  {
+    title: "IHAX 24",
+    position: "Participant",
+    duration: "2024",
+    description: "A marketplace of PDF embedding which consists of learning materials",
+    link: "https://github.com/szeyu/IHAX-2024-HMIR"
+  },
+  {
+    title: "UMHackathon 24",
+    position: "Participant",
+    duration: "2024",
+    description: "Chat RAG with personal finance data which improve financial literacy.",
+    link: "https://github.com/szeyu/PHMIR_umHack"
+  },
+  {
+    title: "KitaHack 24",
+    position: "Participant",
+    duration: "2024",
+    description: "Daily RUOK which use PaLM AI for daily mental health screening with recommendataion after each questionares generated by AI daily.",
+    link: "https://github.com/szeyu/Daily-RUOK"
+  },
+  {
+    title: "1st Day Hack",
+    position: "Participant",
+    duration: "2022",
+    description: "Allow people who are blind to move to other places which they haven't went before without guidance and assistance for other people.",
+    link: "https://github.com/szeyu/1st_Day_Hack"
+  }
 ];
-
-export const hackathonAchievements = [
-  {
-    title: "UM Datathon 2024",
-    position: "🥇 Champion",
-    project: "Bitcoin Quant Trading",
-    description: "Developed an AI-powered quantitative trading system for cryptocurrency markets",
-    github: "https://github.com/yourusername/bitcoin-quant"
-  },
-  // ... other achievements
-]; 

@@ -5,7 +5,6 @@ import HeroSection from "@/components/sections/HeroSection";
 import StatsSection from "@/components/sections/StatsSection";
 import SkillsSection from "@/components/sections/SkillsSection";
 import TechStackSection from "@/components/sections/TechStackSection";
-import HackathonSection from "@/components/sections/HackathonSection";
 import FeaturedProjectsSection from "@/components/sections/FeaturedProjectsSection";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <StatsSection />
       <SkillsSection />
       <TechStackSection />
-      <HackathonSection />
       <FeaturedProjectsSection />
     </main>
   );
